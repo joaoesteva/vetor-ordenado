@@ -2,7 +2,6 @@
 
 #define MAX 50
 
-// Função para inserir um elemento de forma ordenada
 void inserirOrdenado(int vetor[], int *tamanho, int valor) {
     if (*tamanho >= MAX) {
         printf("Erro: Capacidade máxima do vetor atingida!\n");
@@ -24,7 +23,6 @@ void inserirOrdenado(int vetor[], int *tamanho, int valor) {
     (*tamanho)++;
 }
 
-// Função para imprimir o vetor
 void imprimirVetor(int vetor[], int tamanho) {
     if (tamanho == 0) {
         printf("O vetor está vazio!\n");
@@ -37,7 +35,6 @@ void imprimirVetor(int vetor[], int tamanho) {
     printf("\n");
 }
 
-// Função de busca binária
 int buscaBinaria(int vetor[], int tamanho, int valor) {
     int inicio = 0, fim = tamanho - 1, meio;
     while (inicio <= fim) {
@@ -53,7 +50,6 @@ int buscaBinaria(int vetor[], int tamanho, int valor) {
     return -1;
 }
 
-// Função para remover um elemento do vetor
 void removerElemento(int vetor[], int *tamanho, int valor) {
     int posicao = buscaBinaria(vetor, *tamanho, valor);
     if (posicao == -1) {
@@ -78,7 +74,6 @@ int main() {
         scanf("%d", &tamanho);
     } while (tamanho < 3 || tamanho > 50);
 
-    // Inserção ordenada inicial
     printf("Digite %d valores para preencher o vetor (em qualquer ordem):\n", tamanho);
     int entrada;
     for (int i = 0; i < tamanho; i++) {
@@ -86,7 +81,6 @@ int main() {
         inserirOrdenado(vetor, &i, entrada);
     }
 
-    // Menu de opções
     do {
         printf("\nMENU:\n");
         printf("1 - Imprimir vetor\n");
