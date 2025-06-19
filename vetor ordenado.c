@@ -68,7 +68,6 @@ int main() {
     int vetor[MAX];
     int tamanho, opcao, valor;
 
-    // Solicita o tamanho do vetor ao usuário
     do {
         printf("Digite o tamanho do vetor (entre 3 e 50): ");
         scanf("%d", &tamanho);
